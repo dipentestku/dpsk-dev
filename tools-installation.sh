@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd ../../tmp > /dev/null 2>&1 || { echo "Direktori 'temp' tidak ditemukan!"; exit 1; }
-
+cd /
+cd /tmp > /dev/null 2>&1 || { echo "Direktori 'temp' tidak ditemukan!"; exit 1; }
 echo -e "Sedang menginstall ${YELLOW}git${NC}"
 sudo apt-get install -y git >> /dev/null
 git clone https://github.com/dipentestku/dpsk-tool.git > /dev/null 2>&1 || { echo "Gagal meng-clone repository!"; exit 1; }
