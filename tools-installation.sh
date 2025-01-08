@@ -2,6 +2,7 @@
 
 cd / || { echo "Gagal masuk ke root directory!"; exit 1; }
 cd /tmp > /dev/null 2>&1 || { echo "Gagal menemukan directory!!"; exit 1; }
+sudo rm -rf dpsk-tool > /dev/null 2>&1 || { echo "Gagal menghapus directory!!"; exit 1; }
 echo -e "Sedang menginstall ${YELLOW}git${NC}"
 sudo apt-get install -y git >> /dev/null
 git clone https://github.com/dipentestku/dpsk-tool.git > /dev/null 2>&1 || { echo "Gagal meng-clone repository!"; exit 1; }
